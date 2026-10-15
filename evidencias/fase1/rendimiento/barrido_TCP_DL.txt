@@ -1,0 +1,140 @@
+=== BARRIDO TCP DOWNLINK - srsRAN Zero-RF ===
+Fecha: mié 14 oct 2026 21:16:35 -05
+UE: 10.45.0.2
+Servidor iperf3: 192.168.10.16
+
+
+========== PRUEBA DL 1/5 ==========
+Connecting to host 192.168.10.16, port 5201
+Reverse mode, remote host 192.168.10.16 is sending
+[  5] local 10.45.0.2 port 51298 connected to 192.168.10.16 port 5201
+[ ID] Interval           Transfer     Bitrate
+[  5]   0.00-1.00   sec  3.00 MBytes  25.2 Mbits/sec                  
+[  5]   1.00-2.00   sec  5.88 MBytes  49.3 Mbits/sec                  
+[  5]   2.00-3.00   sec  6.00 MBytes  50.3 Mbits/sec                  
+[  5]   3.00-4.00   sec  6.12 MBytes  51.4 Mbits/sec                  
+[  5]   4.00-5.00   sec  6.25 MBytes  52.4 Mbits/sec                  
+[  5]   5.00-6.00   sec  6.00 MBytes  50.3 Mbits/sec                  
+[  5]   6.00-7.00   sec  6.12 MBytes  51.4 Mbits/sec                  
+[  5]   7.00-8.00   sec  6.00 MBytes  50.4 Mbits/sec                  
+[  5]   8.00-9.00   sec  6.12 MBytes  51.4 Mbits/sec                  
+[  5]   9.00-10.00  sec  6.00 MBytes  50.3 Mbits/sec                  
+[  5]  10.00-11.00  sec  5.62 MBytes  47.2 Mbits/sec                  
+[  5]  11.00-12.00  sec  6.38 MBytes  53.5 Mbits/sec                  
+[  5]  12.00-13.00  sec  6.12 MBytes  51.4 Mbits/sec                  
+[  5]  13.00-14.00  sec  6.12 MBytes  51.4 Mbits/sec                  
+[  5]  14.00-15.00  sec  6.12 MBytes  51.4 Mbits/sec                  
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bitrate         Retr
+[  5]   0.00-15.02  sec  91.0 MBytes  50.8 Mbits/sec  776             sender
+[  5]   0.00-15.00  sec  87.9 MBytes  49.1 Mbits/sec                  receiver
+
+iperf Done.
+
+========== PRUEBA DL 2/5 ==========
+Connecting to host 192.168.10.16, port 5201
+Reverse mode, remote host 192.168.10.16 is sending
+[  5] local 10.45.0.2 port 42180 connected to 192.168.10.16 port 5201
+[ ID] Interval           Transfer     Bitrate
+[  5]   0.00-1.00   sec  5.62 MBytes  47.2 Mbits/sec                  
+[  5]   1.00-2.00   sec  6.00 MBytes  50.3 Mbits/sec                  
+[  5]   2.00-3.00   sec  6.00 MBytes  50.3 Mbits/sec                  
+[  5]   3.00-4.00   sec  6.12 MBytes  51.4 Mbits/sec                  
+[  5]   4.00-5.00   sec  5.88 MBytes  49.3 Mbits/sec                  
+[  5]   5.00-6.00   sec  6.12 MBytes  51.4 Mbits/sec                  
+[  5]   6.00-7.00   sec  6.12 MBytes  51.4 Mbits/sec                  
+[  5]   7.00-8.00   sec  6.12 MBytes  51.4 Mbits/sec                  
+[  5]   8.00-9.00   sec  6.00 MBytes  50.3 Mbits/sec                  
+[  5]   9.00-10.00  sec  6.12 MBytes  51.4 Mbits/sec                  
+[  5]  10.00-11.00  sec  5.12 MBytes  43.0 Mbits/sec                  
+[  5]  11.00-12.00  sec  7.00 MBytes  58.7 Mbits/sec                  
+[  5]  12.00-13.00  sec  6.12 MBytes  51.4 Mbits/sec                  
+[  5]  13.00-14.00  sec  6.12 MBytes  51.4 Mbits/sec                  
+[  5]  14.00-15.00  sec  6.12 MBytes  51.4 Mbits/sec                  
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bitrate         Retr
+[  5]   0.00-15.02  sec  93.2 MBytes  52.1 Mbits/sec  1092             sender
+[  5]   0.00-15.00  sec  90.6 MBytes  50.7 Mbits/sec                  receiver
+
+iperf Done.
+
+========== PRUEBA DL 3/5 ==========
+Connecting to host 192.168.10.16, port 5201
+Reverse mode, remote host 192.168.10.16 is sending
+[  5] local 10.45.0.2 port 55852 connected to 192.168.10.16 port 5201
+[ ID] Interval           Transfer     Bitrate
+[  5]   0.00-1.00   sec  5.62 MBytes  47.2 Mbits/sec                  
+[  5]   1.00-2.00   sec  6.12 MBytes  51.4 Mbits/sec                  
+[  5]   2.00-3.00   sec  6.12 MBytes  51.4 Mbits/sec                  
+[  5]   3.00-4.00   sec  6.00 MBytes  50.3 Mbits/sec                  
+[  5]   4.00-5.00   sec  6.00 MBytes  50.3 Mbits/sec                  
+[  5]   5.00-6.00   sec  6.12 MBytes  51.4 Mbits/sec                  
+[  5]   6.00-7.00   sec  6.12 MBytes  51.4 Mbits/sec                  
+[  5]   7.00-8.00   sec  6.12 MBytes  51.4 Mbits/sec                  
+[  5]   8.00-9.00   sec  6.00 MBytes  50.3 Mbits/sec                  
+[  5]   9.00-10.00  sec  6.12 MBytes  51.4 Mbits/sec                  
+[  5]  10.00-11.00  sec  6.12 MBytes  51.4 Mbits/sec                  
+[  5]  11.00-12.00  sec  6.00 MBytes  50.3 Mbits/sec                  
+[  5]  12.00-13.00  sec  6.12 MBytes  51.4 Mbits/sec                  
+[  5]  13.00-14.00  sec  6.00 MBytes  50.3 Mbits/sec                  
+[  5]  14.00-15.00  sec  6.25 MBytes  52.4 Mbits/sec                  
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bitrate         Retr
+[  5]   0.00-15.02  sec  94.4 MBytes  52.7 Mbits/sec  1036             sender
+[  5]   0.00-15.00  sec  90.9 MBytes  50.8 Mbits/sec                  receiver
+
+iperf Done.
+
+========== PRUEBA DL 4/5 ==========
+Connecting to host 192.168.10.16, port 5201
+Reverse mode, remote host 192.168.10.16 is sending
+[  5] local 10.45.0.2 port 58544 connected to 192.168.10.16 port 5201
+[ ID] Interval           Transfer     Bitrate
+[  5]   0.00-1.00   sec  5.62 MBytes  47.2 Mbits/sec                  
+[  5]   1.00-2.00   sec  6.12 MBytes  51.4 Mbits/sec                  
+[  5]   2.00-3.00   sec  6.12 MBytes  51.4 Mbits/sec                  
+[  5]   3.00-4.00   sec  6.12 MBytes  51.4 Mbits/sec                  
+[  5]   4.00-5.00   sec  6.12 MBytes  51.4 Mbits/sec                  
+[  5]   5.00-6.00   sec  6.12 MBytes  51.4 Mbits/sec                  
+[  5]   6.00-7.00   sec  6.12 MBytes  51.4 Mbits/sec                  
+[  5]   7.00-8.00   sec  6.12 MBytes  51.4 Mbits/sec                  
+[  5]   8.00-9.00   sec  6.12 MBytes  51.4 Mbits/sec                  
+[  5]   9.00-10.00  sec  6.00 MBytes  50.3 Mbits/sec                  
+[  5]  10.00-11.00  sec  3.62 MBytes  30.4 Mbits/sec                  
+[  5]  11.00-12.00  sec  8.75 MBytes  73.4 Mbits/sec                  
+[  5]  12.00-13.00  sec  6.00 MBytes  50.3 Mbits/sec                  
+[  5]  13.00-14.00  sec  6.12 MBytes  51.4 Mbits/sec                  
+[  5]  14.00-15.00  sec  6.12 MBytes  51.4 Mbits/sec                  
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bitrate         Retr
+[  5]   0.00-15.06  sec  94.8 MBytes  52.8 Mbits/sec  1285             sender
+[  5]   0.00-15.00  sec  91.2 MBytes  51.0 Mbits/sec                  receiver
+
+iperf Done.
+
+========== PRUEBA DL 5/5 ==========
+Connecting to host 192.168.10.16, port 5201
+Reverse mode, remote host 192.168.10.16 is sending
+[  5] local 10.45.0.2 port 41940 connected to 192.168.10.16 port 5201
+[ ID] Interval           Transfer     Bitrate
+[  5]   0.00-1.00   sec  5.75 MBytes  48.2 Mbits/sec                  
+[  5]   1.00-2.00   sec  5.75 MBytes  48.2 Mbits/sec                  
+[  5]   2.00-3.00   sec  6.00 MBytes  50.3 Mbits/sec                  
+[  5]   3.00-4.00   sec  6.00 MBytes  50.3 Mbits/sec                  
+[  5]   4.00-5.00   sec  6.25 MBytes  52.4 Mbits/sec                  
+[  5]   5.00-6.00   sec  6.12 MBytes  51.4 Mbits/sec                  
+[  5]   6.00-7.00   sec  6.12 MBytes  51.4 Mbits/sec                  
+[  5]   7.00-8.00   sec  6.12 MBytes  51.4 Mbits/sec                  
+[  5]   8.00-9.00   sec  6.12 MBytes  51.3 Mbits/sec                  
+[  5]   9.00-10.00  sec  5.50 MBytes  46.2 Mbits/sec                  
+[  5]  10.00-11.00  sec  6.75 MBytes  56.6 Mbits/sec                  
+[  5]  11.00-12.00  sec  6.00 MBytes  50.3 Mbits/sec                  
+[  5]  12.00-13.00  sec  6.12 MBytes  51.4 Mbits/sec                  
+[  5]  13.00-14.00  sec  6.12 MBytes  51.4 Mbits/sec                  
+[  5]  14.00-15.00  sec  6.12 MBytes  51.4 Mbits/sec                  
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bitrate         Retr
+[  5]   0.00-15.02  sec  94.2 MBytes  52.6 Mbits/sec  965             sender
+[  5]   0.00-15.00  sec  90.9 MBytes  50.8 Mbits/sec                  receiver
+
+iperf Done.

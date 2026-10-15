@@ -1,0 +1,31 @@
+=== LATENCIA BAJO CARGA DOWNLINK ===
+Fecha: mié 14 oct 2026 21:19:33 -05
+
+Carga: iperf3 TCP DL durante 30 segundos
+Destino ping: 8.8.8.8
+
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=117 time=483 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=117 time=401 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=117 time=1082 ms
+64 bytes from 8.8.8.8: icmp_seq=4 ttl=117 time=293 ms
+64 bytes from 8.8.8.8: icmp_seq=5 ttl=117 time=286 ms
+64 bytes from 8.8.8.8: icmp_seq=6 ttl=117 time=924 ms
+64 bytes from 8.8.8.8: icmp_seq=7 ttl=117 time=312 ms
+64 bytes from 8.8.8.8: icmp_seq=8 ttl=117 time=318 ms
+64 bytes from 8.8.8.8: icmp_seq=9 ttl=117 time=309 ms
+64 bytes from 8.8.8.8: icmp_seq=10 ttl=117 time=313 ms
+64 bytes from 8.8.8.8: icmp_seq=11 ttl=117 time=315 ms
+64 bytes from 8.8.8.8: icmp_seq=12 ttl=117 time=344 ms
+64 bytes from 8.8.8.8: icmp_seq=13 ttl=117 time=343 ms
+64 bytes from 8.8.8.8: icmp_seq=14 ttl=117 time=326 ms
+64 bytes from 8.8.8.8: icmp_seq=15 ttl=117 time=321 ms
+64 bytes from 8.8.8.8: icmp_seq=16 ttl=117 time=331 ms
+64 bytes from 8.8.8.8: icmp_seq=17 ttl=117 time=335 ms
+64 bytes from 8.8.8.8: icmp_seq=18 ttl=117 time=344 ms
+64 bytes from 8.8.8.8: icmp_seq=19 ttl=117 time=1084 ms
+64 bytes from 8.8.8.8: icmp_seq=20 ttl=117 time=366 ms
+
+--- 8.8.8.8 ping statistics ---
+20 packets transmitted, 20 received, 0% packet loss, time 19016ms
+rtt min/avg/max/mdev = 286.180/441.570/1084.477/252.374 ms, pipe 2

@@ -1,0 +1,31 @@
+===== SISTEMA OPERATIVO =====
+Distributor ID:	Ubuntu
+Description:	Ubuntu 24.04.5 LTS
+Release:	24.04
+Codename:	noble
+
+===== KERNEL =====
+6.8.0-146-generic
+
+===== srsRAN Project - gNB =====
+
+--== srsRAN gNB (commit d2f4b70dda) ==--
+
+srsRAN 5G gNB version 25.10.0 (d2f4b70dda)
+
+===== srsRAN 4G - srsUE =====
+Active RF plugins: libsrsran_rf_uhd.so libsrsran_rf_zmq.so
+Inactive RF plugins: 
+Version 25.10.0
+
+===== Open5GS =====
+Open5GS v2.8.0
+
+
+===== MongoDB =====
+db version v8.0.32
+Build Info: {
+
+===== iperf3 =====
+iperf 3.16 (cJSON 1.7.15)
+Linux david-ubuntu-laptop 6.8.0-146-generic #146-Ubuntu SMP PREEMPT_DYNAMIC Thu Sep  3 16:12:30 UTC 2026 x86_64

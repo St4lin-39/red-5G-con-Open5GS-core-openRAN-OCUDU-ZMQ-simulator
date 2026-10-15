@@ -1,0 +1,17 @@
+oct 14 20:58:10 david-ubuntu-laptop systemd[1]: Started open5gs-upfd.service - Open5GS UPF Daemon.
+oct 14 20:58:10 david-ubuntu-laptop open5gs-upfd[4758]: Open5GS daemon v2.8.0
+oct 14 20:58:10 david-ubuntu-laptop open5gs-upfd[4758]: 10/14 20:58:10.547: [app] INFO: Configuration: '/etc/open5gs/upf.yaml' (../lib/app/ogs-init.c:144)
+oct 14 20:58:10 david-ubuntu-laptop open5gs-upfd[4758]: 10/14 20:58:10.547: [app] INFO: File Logging: '/var/log/open5gs/upf.log' (../lib/app/ogs-init.c:147)
+oct 14 20:58:10 david-ubuntu-laptop open5gs-upfd[4758]: 10/14 20:58:10.605: [metrics] INFO: metrics_server() [http://127.0.0.7]:9090 (../lib/metrics/prometheus/context.c:392)
+oct 14 20:58:10 david-ubuntu-laptop open5gs-upfd[4758]: 10/14 20:58:10.605: [pfcp] INFO: pfcp_server() [127.0.0.7]:8805 (../lib/pfcp/path.c:30)
+oct 14 20:58:10 david-ubuntu-laptop open5gs-upfd[4758]: 10/14 20:58:10.605: [gtp] INFO: gtp_server() [127.0.0.7]:2152 (../lib/gtp/path.c:30)
+oct 14 20:58:10 david-ubuntu-laptop open5gs-upfd[4758]: 10/14 20:58:10.605: [app] INFO: UPF initialize...done (../src/upf/app.c:31)
+oct 14 20:58:10 david-ubuntu-laptop open5gs-upfd[4758]: 10/14 20:58:10.651: [upf] INFO: PFCP associated [127.0.0.4]:8805 (../src/upf/pfcp-sm.c:168)
+oct 14 21:07:07 david-ubuntu-laptop open5gs-upfd[4758]: 10/14 21:07:07.346: [upf] INFO: [Added] Number of UPF-Sessions is now 1 (../src/upf/context.c:212)
+oct 14 21:07:07 david-ubuntu-laptop open5gs-upfd[4758]: 10/14 21:07:07.346: [gtp] INFO: gtp_connect() [127.0.0.4]:2152 (../lib/gtp/path.c:60)
+oct 14 21:07:07 david-ubuntu-laptop open5gs-upfd[4758]: 10/14 21:07:07.346: [upf] INFO: UE F-SEID[UP:0x1b CP:0x68] APN[internet] PDN-Type[1] IPv4[10.45.0.2] IPv6[] (../src/upf/context.c:498)
+oct 14 21:07:07 david-ubuntu-laptop open5gs-upfd[4758]: 10/14 21:07:07.392: [gtp] INFO: gtp_connect() [127.0.0.1]:2152 (../lib/gtp/path.c:60)
+oct 14 21:07:07 david-ubuntu-laptop open5gs-upfd[4758]: 10/14 21:07:07.407: [upf] ERROR: Invalid packet [IP version:6, Packet Length:48] (../src/upf/gtp-path.c:694)
+oct 14 21:07:07 david-ubuntu-laptop open5gs-upfd[4758]: 0000: 60000000 00083aff fe800000 00000000   `.....:.........
+oct 14 21:07:07 david-ubuntu-laptop open5gs-upfd[4758]: 0010: b271cbd3 8503b3d1 ff020000 00000000   .q..............
+oct 14 21:07:07 david-ubuntu-laptop open5gs-upfd[4758]: 0020: 00000000 00000002 8500c61c 00000000   ................

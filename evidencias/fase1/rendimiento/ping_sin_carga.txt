@@ -1,0 +1,56 @@
+=== LATENCIA BASE SIN CARGA ===
+Fecha: mié 14 oct 2026 21:08:47 -05
+
+=== UE -> UPF 10.45.0.1 ===
+PING 10.45.0.1 (10.45.0.1) 56(84) bytes of data.
+64 bytes from 10.45.0.1: icmp_seq=1 ttl=64 time=22.1 ms
+64 bytes from 10.45.0.1: icmp_seq=2 ttl=64 time=35.0 ms
+64 bytes from 10.45.0.1: icmp_seq=3 ttl=64 time=26.3 ms
+64 bytes from 10.45.0.1: icmp_seq=4 ttl=64 time=39.0 ms
+64 bytes from 10.45.0.1: icmp_seq=5 ttl=64 time=28.8 ms
+64 bytes from 10.45.0.1: icmp_seq=6 ttl=64 time=19.1 ms
+64 bytes from 10.45.0.1: icmp_seq=7 ttl=64 time=32.0 ms
+64 bytes from 10.45.0.1: icmp_seq=8 ttl=64 time=21.3 ms
+64 bytes from 10.45.0.1: icmp_seq=9 ttl=64 time=32.0 ms
+64 bytes from 10.45.0.1: icmp_seq=10 ttl=64 time=22.4 ms
+64 bytes from 10.45.0.1: icmp_seq=11 ttl=64 time=34.4 ms
+64 bytes from 10.45.0.1: icmp_seq=12 ttl=64 time=25.5 ms
+64 bytes from 10.45.0.1: icmp_seq=13 ttl=64 time=23.3 ms
+64 bytes from 10.45.0.1: icmp_seq=14 ttl=64 time=33.9 ms
+64 bytes from 10.45.0.1: icmp_seq=15 ttl=64 time=26.3 ms
+64 bytes from 10.45.0.1: icmp_seq=16 ttl=64 time=37.5 ms
+64 bytes from 10.45.0.1: icmp_seq=17 ttl=64 time=29.2 ms
+64 bytes from 10.45.0.1: icmp_seq=18 ttl=64 time=19.9 ms
+64 bytes from 10.45.0.1: icmp_seq=19 ttl=64 time=31.4 ms
+64 bytes from 10.45.0.1: icmp_seq=20 ttl=64 time=21.0 ms
+
+--- 10.45.0.1 ping statistics ---
+20 packets transmitted, 20 received, 0% packet loss, time 19016ms
+rtt min/avg/max/mdev = 19.112/28.018/38.993/6.010 ms
+
+=== UE -> INTERNET 8.8.8.8 ===
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=117 time=40.8 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=117 time=55.3 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=117 time=45.4 ms
+64 bytes from 8.8.8.8: icmp_seq=4 ttl=117 time=45.5 ms
+64 bytes from 8.8.8.8: icmp_seq=5 ttl=117 time=54.9 ms
+64 bytes from 8.8.8.8: icmp_seq=6 ttl=117 time=45.8 ms
+64 bytes from 8.8.8.8: icmp_seq=7 ttl=117 time=32.6 ms
+64 bytes from 8.8.8.8: icmp_seq=8 ttl=117 time=51.3 ms
+64 bytes from 8.8.8.8: icmp_seq=9 ttl=117 time=33.2 ms
+64 bytes from 8.8.8.8: icmp_seq=10 ttl=117 time=50.1 ms
+64 bytes from 8.8.8.8: icmp_seq=11 ttl=117 time=35.4 ms
+64 bytes from 8.8.8.8: icmp_seq=12 ttl=117 time=54.0 ms
+64 bytes from 8.8.8.8: icmp_seq=13 ttl=117 time=41.6 ms
+64 bytes from 8.8.8.8: icmp_seq=14 ttl=117 time=55.5 ms
+64 bytes from 8.8.8.8: icmp_seq=15 ttl=117 time=42.5 ms
+64 bytes from 8.8.8.8: icmp_seq=16 ttl=117 time=38.6 ms
+64 bytes from 8.8.8.8: icmp_seq=17 ttl=117 time=48.2 ms
+64 bytes from 8.8.8.8: icmp_seq=18 ttl=117 time=45.6 ms
+64 bytes from 8.8.8.8: icmp_seq=19 ttl=117 time=36.3 ms
+64 bytes from 8.8.8.8: icmp_seq=20 ttl=117 time=51.4 ms
+
+--- 8.8.8.8 ping statistics ---
+20 packets transmitted, 20 received, 0% packet loss, time 19015ms
+rtt min/avg/max/mdev = 32.580/45.208/55.493/7.250 ms

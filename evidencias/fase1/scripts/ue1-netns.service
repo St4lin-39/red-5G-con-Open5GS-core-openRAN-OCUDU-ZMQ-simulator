@@ -1,0 +1,12 @@
+[Unit]
+Description=Create network namespace for srsUE
+Before=network.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/bin/sh -c '/usr/sbin/ip netns list | grep -qw ue1 || /usr/sbin/ip netns add ue1'
+ExecStop=/bin/sh -c '/usr/sbin/ip netns delete ue1 2>/dev/null || true'
+
+[Install]
+WantedBy=multi-user.target
