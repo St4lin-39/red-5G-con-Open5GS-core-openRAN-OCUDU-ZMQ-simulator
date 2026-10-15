@@ -12,36 +12,33 @@ El objetivo de este README es que la implementación pueda ser entendida y repro
 
 # Contenido
 
-1. Descripción general del proyecto
-2. Componentes utilizados
-3. Arquitectura e interfaces 5G utilizadas
-4. Parámetros generales de nuestra red
-5. Requisitos del sistema
-6. Preparación de Ubuntu
-7. Instalación y configuración de MongoDB
-8. Instalación y configuración de Open5GS
-9. Configuración del abonado 5G
-10. Configuración de red, forwarding y NAT
-11. Creación del namespace `ue1`
-12. Configuración DNS del UE
-13. Instalación de dependencias de srsRAN
-14. Instalación y compilación de srsRAN Project
-15. Instalación y compilación de srsUE
-16. Configuración del gNB
-17. Configuración de srsUE
-18. Automatización del namespace y rutas
-19. Procedimiento para iniciar la red
-20. Comprobación del registro 5G
-21. Pruebas de conectividad
-22. Pruebas de rendimiento
-23. Logs y evidencias
-24. Problemas encontrados y soluciones
-25. Procedimiento para detener la red
-26. Estructura recomendada del repositorio
-27. Seguridad y datos que no deben publicarse
-28. Estado actual y trabajo futuro
-29. Glosario
-30. Referencias
+# Contenido
+
+1. [Descripción general del proyecto](#1-descripción-general-del-proyecto)
+2. [Componentes utilizados](#2-componentes-utilizados)
+3. [Arquitectura e interfaces 5G utilizadas](#3-arquitectura-e-interfaces-5g-utilizadas)
+4. [Parámetros generales de nuestra red](#4-parámetros-generales-de-nuestra-red)
+5. [Requisitos del sistema](#5-requisitos-del-sistema)
+6. [Preparación de Ubuntu](#6-preparación-de-ubuntu)
+7. [Instalación y configuración de MongoDB](#7-instalación-y-configuración-de-mongodb)
+8. [Instalación y configuración de Open5GS](#8-instalación-y-configuración-de-open5gs)
+9. [Configuración del abonado 5G](#9-configuración-del-abonado-5g)
+10. [Configuración de red, forwarding y NAT](#10-configuración-de-red-forwarding-y-nat)
+11. [Creación del namespace `ue1`](#11-creación-del-namespace-ue1)
+12. [Configuración DNS del UE](#12-configuración-dns-del-ue)
+13. [Instalación de dependencias de srsRAN](#13-instalación-de-dependencias-de-srsran)
+14. [Instalación y compilación de srsRAN Project](#14-instalación-y-compilación-de-srsran-project)
+15. [Instalación y compilación de srsUE](#15-instalación-y-compilación-de-srsue)
+16. [Configuración del gNB](#16-configuración-del-gnb)
+17. [Configuración de srsUE](#17-configuración-de-srsue)
+18. [Automatización del namespace y rutas](#18-automatización-del-namespace-y-rutas)
+19. [Procedimiento para iniciar la red](#19-procedimiento-para-iniciar-la-red)
+20. [Comprobación del registro 5G](#20-comprobación-del-registro-5g)
+21. [Pruebas de conectividad](#21-pruebas-de-conectividad)
+22. [Pruebas de rendimiento](#22-pruebas-de-rendimiento)
+23. [Logs y evidencias](#23-logs-y-evidencias)
+24. [Problemas encontrados y soluciones](#24-problemas-encontrados-y-soluciones)
+25. [Referencias](#25-referencias)
 
 ---
 
@@ -1989,225 +1986,8 @@ Evitar cambiar varias configuraciones simultáneamente porque dificulta identifi
 
 ---
 
-# 25. Procedimiento para detener la red
 
-Detener srsUE:
-
-```text
-Ctrl+C
-```
-
-Detener gNB:
-
-```text
-Ctrl+C
-```
-
-Si `iperf3` continúa activo:
-
-```bash
-pkill iperf3
-```
-
-Comprobar:
-
-```bash
-pgrep -a 'gnb|srsue|iperf3'
-```
-
-MongoDB y Open5GS pueden permanecer activos porque son servicios del sistema.
-
----
-
-# 26. Estructura recomendada del repositorio
-
-Las dos implementaciones se mantienen en ramas independientes:
-
-```text
-main
-feature/OCUDU
-feature/srsRAN
-```
-
-Esta rama corresponde a:
-
-```text
-feature/srsRAN
-```
-
-Estructura recomendada:
-
-```text
-README.md
-.gitignore
-
-config/
-    gnb-5g-zmq.yml
-    ue-5g-zmq.conf
-
-    open5gs/
-        amf.yaml
-        smf.yaml
-        upf.yaml
-
-scripts/
-    start-srsue.sh
-    configure-srsue-route.sh
-    ue1-netns.service
-
-docs/
-
-evidencia/
-```
-
-No es necesario subir los repositorios compilados completos de srsRAN.
-
-El README ya explica cómo clonarlos y compilarlos.
-
----
-
-# 27. Seguridad y datos que no deben publicarse
-
-Antes de utilizar:
-
-```bash
-git add .
-```
-
-revisar cuidadosamente el contenido.
-
-No publicar credenciales reales como:
-
-- K;
-- OP;
-- OPc;
-- ADM;
-- credenciales de una SIM física;
-- contraseñas;
-- tokens;
-- claves privadas.
-
-`.gitignore` recomendado:
-
-```gitignore
-# Compilaciones
-build/
-target/
-
-# Logs y capturas
-*.log
-*.pcap
-*.pcapng
-
-# Temporales
-*.tmp
-*.swp
-*~
-
-# IDE / sistema
-.vscode/
-.idea/
-.DS_Store
-Thumbs.db
-
-# Secretos
-.env
-.env.*
-*.secret
-*.secrets
-config/private/
-```
-
-> `.gitignore` no elimina un secreto que ya haya sido incluido anteriormente en el historial de Git. Los archivos deben revisarse antes del primer commit.
-
----
-
-# 28. Estado actual y trabajo futuro
-
-Actualmente se ha validado:
-
-- Open5GS;
-- MongoDB;
-- gNB;
-- srsUE;
-- ZeroMQ;
-- N2;
-- registro 5G;
-- PDU Session;
-- user plane;
-- acceso a Internet;
-- DNS;
-- latencia;
-- throughput UL/DL.
-
-Los siguientes pasos generales del proyecto incluyen:
-
-- análisis detallado de protocolos;
-- análisis de MCS y codificación;
-- integración de SDR;
-- configuración RF;
-- programación de SIM;
-- sustitución de srsUE por un teléfono comercial;
-- mediciones OTA;
-- comparación con la implementación OCUDU.
-
-Cuando el gNB y el Core se ejecuten en equipos diferentes, las direcciones loopback `127.x.x.x` deberán sustituirse por direcciones alcanzables entre los computadores.
-
----
-
-# 29. Glosario
-
-| Sigla | Nombre | Explicación |
-|---|---|---|
-| 5G SA | 5G Standalone | Red 5G que utiliza directamente un 5G Core |
-| 5GC | 5G Core | Núcleo de una red 5G |
-| AMF | Access and Mobility Management Function | Gestiona acceso, registro y movilidad |
-| SMF | Session Management Function | Gestiona las sesiones de datos |
-| UPF | User Plane Function | Transporta el tráfico del usuario |
-| AUSF | Authentication Server Function | Participa en autenticación 5G |
-| UDM | Unified Data Management | Gestiona información del abonado |
-| UDR | Unified Data Repository | Almacena datos utilizados por funciones del Core |
-| NRF | Network Repository Function | Permite registro y descubrimiento de funciones del Core |
-| gNB | Next Generation Node B | Estación base 5G |
-| UE | User Equipment | Dispositivo del usuario |
-| ZMQ | ZeroMQ | Transporte utilizado para intercambiar muestras IQ |
-| IQ | In-phase / Quadrature | Representación digital de una señal compleja |
-| NAS | Non-Access Stratum | Señalización entre UE y Core |
-| NGAP | NG Application Protocol | Señalización N2 entre gNB y AMF |
-| SCTP | Stream Control Transmission Protocol | Transporte utilizado por NGAP |
-| GTP-U | GPRS Tunnelling Protocol User Plane | Túnel utilizado para datos del usuario |
-| PFCP | Packet Forwarding Control Protocol | Control entre SMF y UPF |
-| MCC | Mobile Country Code | Código de país/dominio de red móvil |
-| MNC | Mobile Network Code | Código de operador/red |
-| PLMN | Public Land Mobile Network | Identificador MCC + MNC |
-| TAC | Tracking Area Code | Identificador de Tracking Area |
-| SST | Slice/Service Type | Tipo de Network Slice |
-| SD | Slice Differentiator | Diferenciador de un slice |
-| S-NSSAI | Single Network Slice Selection Assistance Information | Identificador formado por SST y opcionalmente SD |
-| DNN | Data Network Name | Red de datos solicitada por el UE |
-| IMSI | International Mobile Subscriber Identity | Identificador del abonado |
-| 5QI | 5G QoS Identifier | Identificador de características QoS |
-| ARP | Allocation and Retention Priority | Prioridad de asignación y retención QoS |
-| ARFCN | Absolute Radio Frequency Channel Number | Número que representa una frecuencia NR |
-| BW | Bandwidth | Ancho de banda |
-| SCS | Subcarrier Spacing | Separación entre subportadoras |
-| PRB | Physical Resource Block | Unidad de asignación de recursos NR |
-| PDCCH | Physical Downlink Control Channel | Canal físico de control downlink |
-| PDSCH | Physical Downlink Shared Channel | Canal físico de datos downlink |
-| PUSCH | Physical Uplink Shared Channel | Canal físico de datos uplink |
-| PUCCH | Physical Uplink Control Channel | Canal físico de control uplink |
-| PRACH | Physical Random Access Channel | Canal utilizado para acceso aleatorio |
-| PBCH | Physical Broadcast Channel | Canal utilizado para información básica de la celda |
-| CORESET | Control Resource Set | Recursos donde se transporta PDCCH |
-| MCS | Modulation and Coding Scheme | Esquema de modulación y codificación |
-| SINR | Signal-to-Interference-plus-Noise Ratio | Relación señal útil frente a interferencia y ruido |
-| C-RNTI | Cell Radio Network Temporary Identifier | Identificador temporal del UE en la celda |
-| PDU Session | Protocol Data Unit Session | Sesión de conectividad de datos del UE |
-| Zero-RF | Zero Radio Frequency | Pruebas sin transmisión RF física |
-
----
-
-# 30. Referencias
+# 25. Referencias
 
 ## srsRAN Project
 
@@ -2285,22 +2065,3 @@ Entre las especificaciones relevantes para etapas posteriores del análisis se e
 
 ---
 
-# Nota final
-
-Esta rama busca conservar una implementación **reproducible** de la variante basada en srsRAN Project 25.10.
-
-Por esta razón se recomienda no actualizar versiones, parámetros o dependencias de forma arbitraria sin documentar el cambio.
-
-Si se desea experimentar con OCUDU, esos cambios deben mantenerse en:
-
-```text
-feature/OCUDU
-```
-
-La implementación descrita en este documento debe permanecer en:
-
-```text
-feature/srsRAN
-```
-
-para que ambas soluciones puedan compararse de manera independiente.
